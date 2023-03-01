@@ -1,6 +1,6 @@
 # Map Router
 
-This project is a example of a router application. It will be provide the best route between two locations.
+This project is a example of a router application. It will be provided the best route between two locations.
 
 It using libraries such as Mapbox and Maplibre to render the map. Google Maps API to provide the best route and a open source Geocoder using Nominatim.
 
@@ -17,7 +17,15 @@ As commented above, this app wil provide a example of:
 ![Router](images/router.gif)
 ![Router](images/screenshot.png)
 
-## Enviroments
+## Service Architecture
+
+![service](images/architeture.png)
+
+## React Components Architecture
+
+![react-architecture](images/react-architeture.png)
+
+## Environments
 
 It should create a `.env` file with bellow api keys
 
