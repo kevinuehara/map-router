@@ -9,6 +9,7 @@ import { GeocoderForm } from "./components/GeocoderForm";
 import { GeocoderResult } from "./components/types";
 import Pin from "./components/Pin";
 import { Infobox } from "./components/Infobox";
+import { Modal } from "./components/Modal";
 
 const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const MAPTILER_API_KEY = import.meta.env.VITE_MAPTILER_API_KEY;
@@ -33,6 +34,8 @@ export const App = () => {
   const [distance, setDistance] = useState("");
   const [duration, setDuration] = useState("");
 
+  const [modal, setModal] = useState(google.maps.TravelMode.DRIVING);
+
   const [route, setRoute] = useState<any>();
 
   const { map } = useMap();
@@ -41,28 +44,21 @@ export const App = () => {
     if (destinyLat && destinyLng && originLat && originLng) {
       const start = new google.maps.LatLng(originLat, originLng);
       const end = new google.maps.LatLng(destinyLat, destinyLng);
-
       var request = {
         origin: start,
         destination: end,
-        travelMode: google.maps.TravelMode["DRIVING"],
+        travelMode: modal,
       };
 
       directionsService.route(request, function (result, status) {
         if (status == "OK") {
-          const line = google.maps.geometry.encoding.decodePath(
-            result.routes[0].overview_polyline
-          );
-
-          console.log(result);
-
           setDuration(result.routes[0].legs[0].duration.text);
           setDistance(result.routes[0].legs[0].distance.text);
           setRoute(polyline.toGeoJSON(result.routes[0].overview_polyline));
         }
       });
     }
-  }, [destinyLat, destinyLng, originLat, originLng]);
+  }, [destinyLat, destinyLng, originLat, originLng, modal]);
 
   const mapTilerMapStyle = useMemo(() => {
     return `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_API_KEY}`;
@@ -103,6 +99,10 @@ export const App = () => {
     if (!value) {
       setRoute(undefined);
     }
+  };
+
+  const onModalSelect = (event: any) => {
+    setModal(event.target.value);
   };
 
   return (
@@ -157,10 +157,13 @@ export const App = () => {
           </>
         )}
       </Map>
-      <GeocoderForm
-        onOriginSelectEvent={onOriginSelected}
-        onDestinySelectEvent={onDestinySelected}
-      />
+      <div className="">
+        <GeocoderForm
+          onOriginSelectEvent={onOriginSelected}
+          onDestinySelectEvent={onDestinySelected}
+        />
+        <Modal onModalSelect={onModalSelect} />
+      </div>
     </>
   );
 };

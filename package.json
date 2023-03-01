@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mapbox/mapbox-gl-directions": "^4.1.1",
     "@mapbox/polyline": "^1.1.1",
     "axios": "^1.3.4",
     "google-maps": "^4.3.3",

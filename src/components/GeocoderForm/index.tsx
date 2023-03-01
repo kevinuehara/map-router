@@ -55,7 +55,7 @@ export const GeocoderForm = ({
   };
 
   return (
-    <div className="m-2">
+    <div className="m-2 w-1/3">
       <GeocoderInput
         onSearch={onSearchOrigin}
         placeholder="Digite a origem"

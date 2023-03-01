@@ -17,7 +17,7 @@ export const GeocoderInput = ({
   value,
 }: GeocoderInputProps) => {
   return (
-    <div className="z-10 relative w-1/3">
+    <div className="z-10 relative w-full">
       <input
         type="search"
         name="geocoder"
