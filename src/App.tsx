@@ -7,9 +7,9 @@ import { Loader } from "google-maps";
 import polyline from "@mapbox/polyline";
 import { GeocoderForm } from "./components/GeocoderForm";
 import { GeocoderResult } from "./components/types";
-import Pin from "./components/Pin";
 import { Infobox } from "./components/Infobox";
 import { Modal } from "./components/Modal";
+import { pinIconMap } from "./components/icons";
 
 const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const MAPTILER_API_KEY = import.meta.env.VITE_MAPTILER_API_KEY;
@@ -107,13 +107,13 @@ export const App = () => {
       >
         {originLat && originLng && (
           <Marker longitude={originLng} latitude={originLat} anchor="bottom">
-            <Pin />
+            {pinIconMap()}
           </Marker>
         )}
 
         {destinyLat && destinyLng && (
           <Marker longitude={destinyLng} latitude={destinyLat} anchor="bottom">
-            <Pin />
+            {pinIconMap()}
           </Marker>
         )}
 
