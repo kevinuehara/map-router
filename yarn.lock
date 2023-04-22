@@ -176,13 +176,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.19.0"
 
-"@babel/runtime@^7.9.2":
-  version "7.21.0"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
-  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
-  dependencies:
-    regenerator-runtime "^0.13.11"
-
 "@babel/template@^7.20.7":
   version "7.20.7"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.20.7.tgz#a15090c2839a83b02aa996c0b4994005841fd5a8"
@@ -379,21 +372,6 @@
   version "2.0.2"
   resolved "https://registry.npmjs.org/@mapbox/jsonlint-lines-primitives/-/jsonlint-lines-primitives-2.0.2.tgz#ce56e539f83552b58d10d672ea4d6fc9adc7b234"
   integrity sha512-rY0o9A5ECsTQRVhv7tL/OyDpGAoUB4tTvLiW1DSzQGq4bvTPhNw1VpSNjDJc5GFZ2XuyOtSWSVN05qOtcD71qQ==
-
-"@mapbox/mapbox-gl-directions@^4.1.1":
-  version "4.1.1"
-  resolved "https://registry.npmjs.org/@mapbox/mapbox-gl-directions/-/mapbox-gl-directions-4.1.1.tgz#adda7a01cbbd18b250c568618cf129827a3e88f2"
-  integrity sha512-jYMq9Xk9D7BUOauzB95TMl1bsMR2cFnX8b9SH+Xmm+fO1+ryX0/4nzKlqSuNLcxxNLO/zKap6cnN5x/XtLfUHA==
-  dependencies:
-    "@mapbox/polyline" "^1.1.1"
-    deep-assign "^3.0.0"
-    lodash.debounce "^4.0.6"
-    lodash.isequal "^4.2.0"
-    lodash.template "^4.2.5"
-    redux "^4.2.0"
-    redux-thunk "^2.4.2"
-    suggestions "^1.7.1"
-    turf-extent "^1.0.4"
 
 "@mapbox/mapbox-gl-supported@^2.0.1":
   version "2.0.1"
@@ -766,13 +744,6 @@ decamelize@^1.1.0, decamelize@^1.2.0:
   resolved "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha512-z2S+W9X73hAUUki+N+9Za2lBlun89zigOyGrsax+KUQ6wKW4ZoWpEYBkGhQjwAjjDCkWxhY0VKEhk8wzY7F5cA==
 
-deep-assign@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/deep-assign/-/deep-assign-3.0.0.tgz#c8e4c4d401cba25550a2f0f486a2e75bc5f219a2"
-  integrity sha512-YX2i9XjJ7h5q/aQ/IM9PEwEnDqETAIYbggmdDB3HLTlSgo1CxPsj6pvhPG68rq6SVE0+p+6Ywsm5fTYNrYtBWw==
-  dependencies:
-    is-obj "^1.0.0"
-
 defined@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/defined/-/defined-1.0.1.tgz#c0b9db27bfaffd95d6f61399419b893df0f91ebf"
@@ -919,11 +890,6 @@ function-bind@^1.1.1:
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
-fuzzy@^0.1.1:
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
-  integrity sha512-/gZffu4ykarLrCiP3Ygsa86UAo1E5vEVlvTrpkKywXSbP9Xhln3oSp9QSV57gEq3JFFpGJ4GZ+5zdEp3FcUh4w==
-
 gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
   resolved "https://registry.npmjs.org/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
@@ -1057,11 +1023,6 @@ is-number@^7.0.0:
   resolved "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
-is-obj@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
-  integrity sha512-l4RyHgRqGN4Y3+9JHVrNqO+tN0rV5My76uW5/nuO4K1b6vw5G8d/cmFjP9tRfEsdhZNt0IFdZuK/c2Vr4Nb+Qg==
-
 is-plain-obj@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-1.1.0.tgz#71a50c8429dfca773c92a390a4a03b39fcd51d3e"
@@ -1119,35 +1080,10 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash._reinterpolate@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
-  integrity sha512-xYHt68QRoYGjeeM/XOE1uJtvXQAgvszfBhjV4yvsQH0u2i9I6cI6c6/eG4Hh3UAOVn0y/xAXwmTzEay49Q//HA==
-
-lodash.debounce@^4.0.6, lodash.debounce@^4.0.8:
+lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
-
-lodash.isequal@^4.2.0:
-  version "4.5.0"
-  resolved "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
-
-lodash.template@^4.2.5:
-  version "4.5.0"
-  resolved "https://registry.npmjs.org/lodash.template/-/lodash.template-4.5.0.tgz#f976195cf3f347d0d5f52483569fe8031ccce8ab"
-  integrity sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==
-  dependencies:
-    lodash._reinterpolate "^3.0.0"
-    lodash.templatesettings "^4.0.0"
-
-lodash.templatesettings@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/lodash.templatesettings/-/lodash.templatesettings-4.2.0.tgz#e481310f049d3cf6d47e912ad09313b154f0fb33"
-  integrity sha512-stgLz+i3Aa9mZgnjr/O+v9ruKZsPsndy7qPZOchbqk2cnTU1ZaldKK+v7m54WoKIyxiuMZTKT2H81F8BeAc3ZQ==
-  dependencies:
-    lodash._reinterpolate "^3.0.0"
 
 loose-envify@^1.1.0:
   version "1.4.0"
@@ -1566,23 +1502,6 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-redux-thunk@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.4.2.tgz#b9d05d11994b99f7a91ea223e8b04cf0afa5ef3b"
-  integrity sha512-+P3TjtnP0k/FEjcBL5FZpoovtvrTNT/UXd4/sluaSyrURlSlhLSzEdfsTBW7WsKB6yPvgd7q/iZPICFjW4o57Q==
-
-redux@^4.2.0:
-  version "4.2.1"
-  resolved "https://registry.npmjs.org/redux/-/redux-4.2.1.tgz#c08f4306826c49b5e9dc901dee0452ea8fce6197"
-  integrity sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==
-  dependencies:
-    "@babel/runtime" "^7.9.2"
-
-regenerator-runtime@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
-  integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
-
 resolve-protobuf-schema@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/resolve-protobuf-schema/-/resolve-protobuf-schema-2.1.0.tgz#9ca9a9e69cf192bbdaf1006ec1973948aa4a3758"
@@ -1678,14 +1597,6 @@ strip-indent@^3.0.0:
   dependencies:
     min-indent "^1.0.0"
 
-suggestions@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.npmjs.org/suggestions/-/suggestions-1.7.1.tgz#2fefcbde8967353056d1d6eaed891b46d98a7e5c"
-  integrity sha512-gl5YPAhPYl07JZ5obiD9nTZsg4SyZswAQU/NNtnYiSnFkI3+ZHuXAiEsYm7AaZ71E0LXSFaGVaulGSWN3Gd71A==
-  dependencies:
-    fuzzy "^0.1.1"
-    xtend "^4.0.0"
-
 supercluster@^7.1.5:
   version "7.1.5"
   resolved "https://registry.npmjs.org/supercluster/-/supercluster-7.1.5.tgz#65a6ce4a037a972767740614c19051b64b8be5a3"
@@ -1756,18 +1667,6 @@ trim-newlines@^3.0.0:
   resolved "https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.1.tgz#260a5d962d8b752425b32f3a7db0dcacd176c144"
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
-turf-extent@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.npmjs.org/turf-extent/-/turf-extent-1.0.4.tgz#9f28ce11af916ada88862a062074658ba3fe0f01"
-  integrity sha512-JPQtCq6Q5YwwkzQzSU8LYe1KbFnzEVbh21s/o8kYtgs6AeON47t0Gd2q+qLuQOr6usMiJoXylMvgk5qagOzYTQ==
-  dependencies:
-    turf-meta "^1.0.2"
-
-turf-meta@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/turf-meta/-/turf-meta-1.0.2.tgz#74d4c495938eb24772a70b31a157ee3d4fd6ba1b"
-  integrity sha512-oR+OxR++Wlie4fr2cMLbmdVAA9rfHxnuX/H5bphCaDTc14JDmd/ixWer08vhoawnvjE98Eq6o4UOGY8AMRbexw==
-
 type-fest@^0.13.1:
   version "0.13.1"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.13.1.tgz#0172cb5bce80b0bd542ea348db50c7e21834d934"
@@ -1837,7 +1736,7 @@ which@^1.3.1:
   dependencies:
     isexe "^2.0.0"
 
-xtend@^4.0.0, xtend@^4.0.2:
+xtend@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==

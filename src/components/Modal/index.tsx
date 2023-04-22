@@ -6,7 +6,7 @@ export const Modal = ({ onModalSelect }: ModalProps) => {
   return (
     <div className="relative z-20">
       <select
-        className="h-10 w-56 text-lg ml-2"
+        className="flex justify-center items-center h-10 w-56 text-lg ml-2"
         onChange={onModalSelect}
         defaultValue={google.maps.TravelMode.DRIVING}
       >

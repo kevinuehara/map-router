@@ -64,25 +64,6 @@ export const App = () => {
     return `https://api.maptiler.com/maps/basic-v2/style.json?key=${MAPTILER_API_KEY}`;
   }, []);
 
-  useEffect(() => {
-    if (originLat && originLng) {
-      console.log(originLat, originLng);
-      map?.flyTo({
-        center: [originLng, originLat],
-        zoom: 14,
-      });
-    }
-  }, [originLat, originLng]);
-
-  useEffect(() => {
-    if (destinyLat && destinyLng) {
-      map?.flyTo({
-        center: [destinyLng, destinyLat],
-        zoom: 14,
-      });
-    }
-  }, [destinyLat, destinyLng]);
-
   const onOriginSelected = (value: GeocoderResult | undefined) => {
     setOriginLat(value ? parseFloat(value.lat) : undefined);
     setOriginLng(value ? parseFloat(value.lon) : undefined);

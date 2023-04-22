@@ -4,3 +4,5 @@ export interface GeocoderResult {
   lat: string;
   lon: string;
 }
+
+export type SearchValueType = GeocoderResult | string | undefined;

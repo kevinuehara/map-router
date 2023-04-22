@@ -16,12 +16,10 @@ export const GeocoderForm = ({
   const [originResults, setOriginResults] = useState<GeocoderResult[]>([]);
   const [destinyResults, setDestinyResults] = useState<GeocoderResult[]>([]);
 
-  const [originValue, setOriginValue] = useState<GeocoderResult>();
-  const [destinyValue, setDestinyValue] = useState<GeocoderResult>();
+  const [originValue, setOriginValue] = useState<string | GeocoderResult>();
+  const [destinyValue, setDestinyValue] = useState<string | GeocoderResult>();
 
-  const onSearchOrigin = async (e: any) => {
-    const value = e.target.value;
-
+  const onSearchOrigin = async (value: string) => {
     setOriginValue(value);
     if (value) {
       const results = await GeocoderService.getResults(value);
@@ -37,8 +35,7 @@ export const GeocoderForm = ({
     setOriginResults([]);
   };
 
-  const onSearchDestiny = async (e: any) => {
-    const value = e.target.value;
+  const onSearchDestiny = async (value: string) => {
     setDestinyValue(value);
     if (value) {
       const results = await GeocoderService.getResults(value);
@@ -59,7 +56,7 @@ export const GeocoderForm = ({
       <GeocoderInput
         onSearch={onSearchOrigin}
         placeholder="Digite a origem"
-        value={originValue}
+        valueSelectedOnAutoComplete={originValue}
         onSelect={onOriginSelect}
         results={originResults}
       />
@@ -67,7 +64,7 @@ export const GeocoderForm = ({
       <GeocoderInput
         onSearch={onSearchDestiny}
         placeholder="Digite o destino"
-        value={destinyValue}
+        valueSelectedOnAutoComplete={destinyValue}
         onSelect={onDestinySelect}
         results={destinyResults}
       />
