@@ -7,8 +7,9 @@ export const Infobox = ({ distance, duration }: InfoboxProps) => {
   return (
     <div
       className={`
-      absolute 
-      z-20 bottom-0
+      fixed 
+      z-20
+      bottom-0
        text-white text-lg
       flex flex-col justify-center items-center rounded
       `}
