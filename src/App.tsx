@@ -38,8 +38,6 @@ export const App = () => {
 
   const [route, setRoute] = useState<any>();
 
-  const { map } = useMap();
-
   useEffect(() => {
     if (destinyLat && destinyLng && originLat && originLng) {
       const start = new google.maps.LatLng(originLat, originLng);

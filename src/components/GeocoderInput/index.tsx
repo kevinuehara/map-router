@@ -25,6 +25,10 @@ export const GeocoderInput = ({
     const valueSelectedType: GeocoderResult =
       valueSelectedOnAutoComplete as GeocoderResult;
 
+    if (!valueSelectedOnAutoComplete && !searchValue) {
+      return "";
+    }
+
     return valueSelectedType ? valueSelectedType.display_name : searchValue;
   };
 

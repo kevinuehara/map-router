@@ -1,6 +1,6 @@
 import { GeocoderResult } from "../components/types";
 
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 
 export class GeocoderService {
   private static NOMINATIM_HOST = "https://nominatim.openstreetmap.org/search?";
