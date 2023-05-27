@@ -14,6 +14,8 @@ As commented above, this app wil provide a example of:
   - Walk
 - Duration and Distance of route
 
+Article: https://dev.to/kevin-uehara/creating-geographic-solutions-with-maps-in-frontend-english-version-2n3j
+
 ![Router](images/router.gif)
 ![Router](images/screenshot.png)
 
